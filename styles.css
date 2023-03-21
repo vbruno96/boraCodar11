@@ -104,6 +104,7 @@ main form input::placeholder {
   color: var(--gray-400);
 }
 
+main form input:hover,
 main form input:focus {
   outline: 1px solid var(--purple-500);
 }

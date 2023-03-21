@@ -89,6 +89,7 @@ main form label {
 }
 
 main form input {
+  width: 100%;
   background: var(--white);
   color: var(--gray-800);
   margin-bottom: 1.6rem;
@@ -105,6 +106,11 @@ main form input::placeholder {
 
 main form input:focus {
   outline: 1px solid var(--purple-500);
+}
+
+main form input:invalid {
+  position: relative;
+  outline: 1px solid #ED3A5A;
 }
 
 main form .label-wrapper {
@@ -128,8 +134,20 @@ main form .label-wrapper {
   position: relative;
 }
 
-.input-wrapper input {
-  width: 100%;
+.input-wrapper:has(input:invalid)::after {
+  display: block;
+  margin-top: -.8rem;
+  margin-bottom: 1.6rem;
+  color: #ED3A5A;
+  font-size: 1.4rem;
+}
+
+.input-wrapper:has(input[type="email"]:invalid)::after {
+  content: "Digite um e-mail válido";
+}
+
+.input-wrapper:has(input[type="password"]:invalid)::after {
+  content: "Digite uma senha válida (minímo 5 caracteres)";
 }
 
 .input-wrapper .hidden-password {

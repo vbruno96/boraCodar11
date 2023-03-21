@@ -20,11 +20,13 @@
     <main>
       <h1>Acesse a plataforma</h1>
       <p>Faça login ou registre-se para começar a construir seus projetos ainda hoje.</p>
-      <form>
+      <form onsubmit="handleLogin(event)">
         <label for="email">
           E-mail
         </label>
-        <input type="email" name="login" id="email" placeholder="Digite seu e-mail">
+        <div class="input-wrapper">
+          <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+        </div>
         <div class="label-wrapper">
           <label for="password">
             Senha
@@ -32,7 +34,7 @@
           <a href="#">Esqueceu a senha?</a>
         </div>
         <div class="input-wrapper">
-          <input type="password" name="password" id="password" placeholder="Digite sua senha">
+          <input type="password" name="password" id="password" placeholder="Digite sua senha" minlength="5">
           <button type="button" class="hidden-password" onclick="toggleHiddenPassword()">
             <i id="slashEye" class="ph ph-eye-slash"></i>
             <i id="eye" class="ph ph-eye"></i>

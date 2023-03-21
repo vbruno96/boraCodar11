@@ -11,6 +11,7 @@
   font-size: 62.5%;
 
   /* Colors */
+  --purple-300: #9F67FF;
   --purple-500: #7C3AED;
   --gray-50: #F8FAFC;
   --gray-100: #F1F5F9;
@@ -22,9 +23,14 @@
   --gray-700: #334155;
   --gray-800: #1E293B;
   --gray-900: #0F172A;
+  --white: #FFF;
 }
 
 body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: var(--gray-50);
   font-size: 1.6rem;
 }
 
@@ -32,4 +38,122 @@ body,
 input,
 button {
   font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  color: var(--purple-500);
+  text-decoration: none;
+}
+
+a:hover,
+a:visited {
+  text-decoration: underline;
+}
+
+aside {
+  flex: 1;
+  padding: 4rem 11.2rem;
+}
+
+aside header {
+  margin-bottom: 11.4rem;
+}
+
+main h1 {
+  color: var(--gray-800);
+  margin-bottom: 1.6rem;
+  font-size: 3.6rem;
+  line-height: 5.5rem;
+}
+
+main p {
+  max-width: 35rem;
+  color: var(--gray-600);
+  line-height: 2.4rem;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 38.4rem;
+  margin-top: 4rem;
+}
+
+main form label {
+  color: var(--gray-800);
+  margin-bottom: .8rem;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  font-weight: 600;
+}
+
+main form input {
+  background: var(--white);
+  color: var(--gray-800);
+  margin-bottom: 1.6rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  padding: 1.6rem 1.2rem;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+main form input::placeholder {
+  color: var(--gray-400);
+}
+
+main form input:focus {
+  outline: 1px solid var(--purple-500);
+}
+
+main form .label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .8rem;
+}
+
+.label-wrapper label {
+  margin-bottom: 0;
+}
+
+.label-wrapper a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.1rem;
+}
+
+.input-wrapper input {
+  position: relative;
+  width: 100%;
+}
+
+main form button {
+  background: var(--purple-500);
+  color: var(--white);
+  margin: 1.6rem 0;
+  border: none;
+  border-radius: 4px;
+  padding: 1.6rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition: background ease-in .2s;
+}
+
+main form button:hover {
+  background: var(--purple-300);
+}
+
+main p a {
+  font-weight: 700;
+}
+
+main p:last-of-type {
+  margin-top: 1.6rem;
+}
+
+.background {
+  flex: 2;
+  background: url(./assets/background.png) no-repeat center/cover;
 }

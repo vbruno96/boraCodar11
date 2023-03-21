@@ -15,7 +15,7 @@
     <header>
       <img src="./assets/logo.svg" alt="">
     </header>
-    <main class="content">
+    <main>
       <h1>Acesse a plataforma</h1>
       <p>Faça login ou registre-se para começar a construir seus projetos ainda hoje.</p>
       <form action="">
@@ -23,10 +23,12 @@
           E-mail
         </label>
         <input type="email" name="login" id="email" placeholder="Digite seu e-mail">
-        <label for="password">
-          Senha
-        </label>
-        <a href="#">Esqueceu a senha?</a>
+        <div class="label-wrapper">
+          <label for="password">
+            Senha
+          </label>
+          <a href="#">Esqueceu a senha?</a>
+        </div>
         <div class="input-wrapper">
           <input type="password" name="password" id="password" placeholder="Digite sua senha">
         </div>
